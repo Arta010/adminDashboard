@@ -89,7 +89,7 @@ export const ProductAdd =() => {
         <input type="text" className='field' placeholder = 'enter spec in arabic' name="nameAr"/>
         <input type="text" className='field' placeholder = 'enter spec in english' name="nameEn"/>
         <input type="text" className='field' placeholder = 'enter value of spec' name="value"/>
-        <br/>`;
+        `;
         document.getElementById('specs').appendChild(element);
     }
     return (

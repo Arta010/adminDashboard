@@ -23,6 +23,10 @@ form{
     }
 }
 
+.spec{
+    border: 2px solid white;
+}
+
 .inputBox{
     display: flex;
     flex-direction: column;
