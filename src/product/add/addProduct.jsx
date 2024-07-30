@@ -115,7 +115,7 @@ export const ProductAdd =() => {
                 </div>
                 <div className="inputBox">
                 <label>المواصفات التقنية للمنتج</label>
-                <div id="specs">
+                <div id="specs" dir="ltr">
                 </div>
                 </div>
                 <button type="text" onClick={addSpec}>اضافة خانة مواصفات</button>
