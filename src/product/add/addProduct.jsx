@@ -51,13 +51,25 @@ export const ProductAdd =() => {
         }
         document.querySelector('form').onsubmit = async (e) => {
             let spe = [];
+            if(document.getElementById('talk')!==null)
+            {
+                const arr = document.getElementById('talk').value.split('\n');
+                arr.map((element)=>{
+                    const arr1=element.split(',');
+                    spe.push({
+                        nameAr: arr1[0],
+                        nameEn: arr1[1],
+                        value: arr1[2]
+                    })
+                });
+            }else{
             document.querySelectorAll('.spec').forEach((element)=>{
                 spe.push({
                     nameAr: element.children[0].value,
                     nameEn: element.children[1].value,
                     value: element.children[2].value,
                 })
-            });
+            })};
             e.preventDefault();
             try{
             const response = await fetch('https://server1-six-navy.vercel.app/product',{
@@ -92,6 +104,15 @@ export const ProductAdd =() => {
         `;
         document.getElementById('specs').appendChild(element);
     }
+    const addText=(e)=>{
+        e.preventDefault();
+        let element = document.createElement('div');
+        element.classList.add('spec');
+        element.innerHTML = `
+        <textarea style={{resize:'none'}} type="text" className='field' placeholder = 'discription of product' name="discription" id="talk"/>
+        `
+        document.getElementById('specs').appendChild(element);
+    }
     return (
         <>
         <section>
@@ -119,6 +140,7 @@ export const ProductAdd =() => {
                 </div>
                 </div>
                 <button type="text" onClick={addSpec}>اضافة خانة مواصفات</button>
+                <button type="text" onClick={addText}>اضافة خانة نصية</button>
                 <input type="file" id="actual-btn" hidden/>
                 <label id="button" htmlFor="actual-btn">صورة العنصر</label>
                 <img id = 'preview' src=""/>
