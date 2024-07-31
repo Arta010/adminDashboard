@@ -15,6 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "upload":"git add . && git commit -m 'd' && git push",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
