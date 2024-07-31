@@ -57,9 +57,9 @@ export const ProductAdd =() => {
                 arr.map((element)=>{
                     const arr1=element.split(',');
                     spe.push({
-                        nameAr: arr1[0],
-                        nameEn: arr1[1],
-                        value: arr1[2]
+                        nameAr: arr1[2],
+                        nameEn: arr1[0],
+                        value: arr1[1]
                     })
                 });
             }else{
