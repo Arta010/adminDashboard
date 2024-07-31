@@ -112,6 +112,9 @@ export const ProductAdd =() => {
         <textarea style={{resize:'none'}} type="text" value="" className='field' placeholder = '* in row [en -> [قيمة] ->[عربي]] then click enter' name="discription" id="talk"/>
         `
         document.getElementById('specs').appendChild(element);
+        document.querySelectorAll('.adding').forEach((element)=>{
+            element.style.display ="none";
+        })
     }
     return (
         <>
@@ -139,8 +142,8 @@ export const ProductAdd =() => {
                 <div id="specs" dir="ltr">
                 </div>
                 </div>
-                <button type="text" onClick={addSpec}>اضافة خانة مواصفات</button>
-                <button type="text" onClick={addText}>اضافة خانة نصية</button>
+                <button type="text" className ="adding" onClick={addSpec}>اضافة خانة مواصفات</button>
+                <button type="text" className ="adding" onClick={addText}>اضافة خانة نصية</button>
                 <input type="file" id="actual-btn" hidden/>
                 <label id="button" htmlFor="actual-btn">صورة العنصر</label>
                 <img id = 'preview' src=""/>
