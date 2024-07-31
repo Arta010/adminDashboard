@@ -109,7 +109,7 @@ export const ProductAdd =() => {
         let element = document.createElement('div');
         element.classList.add('spec');
         element.innerHTML = `
-        <textarea style={{resize:'none'}} type="text" className='field' placeholder = 'discription of product' name="discription" id="talk"/>
+        <textarea style={{resize:'none'}} type="text" value="" className='field' placeholder = '* in row [en -> [قيمة] ->[عربي]] then click enter' name="discription" id="talk"/>
         `
         document.getElementById('specs').appendChild(element);
     }
